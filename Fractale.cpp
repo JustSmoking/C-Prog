@@ -45,18 +45,18 @@ void MandelBrotComplexeCalcul(int n, double reel, std::string Complexe) {
         }
         else if (i == 2)
         {
-            a += reel;
-            b += ExtractImagePartnumber(Complexe);
-            std::cout<<"Z("<< i << ")" << " = " << a << " + " << b << "i" << std::endl;
+            b += reel;
+            c += ExtractImagePartnumber(Complexe);
+            std::cout<<"Z("<< i << ")" << " = " << b << " + " << c << "i" << std::endl;
         }
         else
         {
-            std::string Chaine = std::to_string(b) + "i";
-            std::tuple<double, double, double> Stock1 = pow(a, Chaine);
+            std::string Chaine = std::to_string(c) + "i";
+            std::tuple<double, double, double> Stock1 = pow(b, Chaine);
             //std::cout<<std::get<1>(Stock1)<<" " <<std::get<2>(Stock1)<<std::endl;
-            a = std::get<1>(Stock1) + reel;
-            b = std::get<2>(Stock1) + ExtractImagePartnumber(Complexe);
-            std::cout<<"Z("<< i << ")" << " = " << a << " + " << b << "i" << std::endl;
+            b = std::get<1>(Stock1) + reel;
+            c = std::get<2>(Stock1) + ExtractImagePartnumber(Complexe);
+            std::cout<<"Z("<< i << ")" << " = " << b << " + " << c << "i" << std::endl;
         }
     }
 }
