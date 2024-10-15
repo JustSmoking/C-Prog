@@ -1,6 +1,5 @@
 #include <iostream>
-#include <string>
-#include <tuple>
+
 
 double ExtractImagePartnumber(std::string &ImageComplexe){
     std::string t;
